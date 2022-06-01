@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class</title>
+    <style>
+        input:focus{
+            color: red;
+        }
+        /* Input type text é o responsável por esse campo onde o usuário insere algum dado. Na config básica de input{color: red;} tudo que for digitado nos dois campos ficarão vermelho. Com o :focus ficará vermelho somente enquanto o cursor estiver dentro do campo. quando eu clico em qualquer outro lugar ficam preto novamente.  */
+
+        /* li:first-child{
+            color: blue;
+        } */
+        /* First-child irá alterar somente o primeiro filho de um elemento pai. No caso o primeiro li do pai ul é o item 1. Caso eu inclua outro elemento, li ou não, antes desse li ele deixará de ser azul, pois a ordem foi alterada. Se tirar o p do comentário é possível conferir. Fará isso com todas as li que tiverem no doc */
+
+        /* li:first-of-type{
+            color: blue;
+        } */
+        /* Nesse caso, ele altera o primeiro do tipo. Caso tenha outros elmentos acima dele ele receberá o estilo definido. */
+
+        /* li:nth-child(2){
+            color: blue;
+        } */
+        /* Consigo escolher qual item ficará em destaque, colocando em parênteses o filho escolhido. Da mesma forma que o first-child, se tiver outro elemento acima irá interferir na ordem. */
+
+        li:nth-of-type(even){
+            color: blue;
+        }
+        /* Como o de cima, mas a existência de elemento acima não altera o resultado. */
+
+        /* OUTROS pseudo-class:
+            :last-child() - irá alterar escolher o item de trás para frente. Em uma lista de 5 elementos, se eu colocar 2 dentro dos parênteses, irá alterar o item 4.
+
+            :nft-last-child() 
+            
+            :last-of-type
+        */
+        /* Em uma lista grande, posso colocar dentro dos parênteses (even) que irá alterar todos os itens pares; ou (odd) para selecionar os itens ímpares.  */
+            
+
+    </style>
+</head>
+<body>
+    <h1>Aula CSS Avançado Programador BR</h1>
+    <input type="text">
+    <input type="text">
+
+    <ul>
+        <p>Hello word</p>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+    <ul>
+        
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+</html>

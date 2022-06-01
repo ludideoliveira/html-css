@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elementos</title>
+    <style>
+        .first::first-line{
+            color: red;
+        }
+
+        .first::first-letter{
+            font-size: 3em;
+        }
+        /* altera somente a primeira letra do elemento */
+
+        p::selection{
+            background-color: gold;
+            color: rgb(222, 8, 193);
+            /* essa config só irá aparecer quando eu selecionar alguma parte dos parágrafos */
+        }
+
+        li{
+            /* list-style-image: url(foto-p.png);
+            margin-left: 300px; */
+            /* utilizando o style image a imagem grande fica muito desproporcional e não é possível redimensioná-la. Uma solução é deixar nesse seletor apenas o list-style: none; e trabalhar com o ::before */
+            list-style: none;
+        }
+        li::before{
+            content: '';
+            /* deixe o content vazio */
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-image: url(foto-p.png);
+            background-repeat: no-repeat;
+            /* background-position: center; */
+            background-size: cover;
+            /* inline-block permite as li ficarem ao lado; a imagem é como uma imagem de fundo e não irá repetir; ele colocou position center, mas não notei diferença sem ele. o cover é importante, pois sem ele o p desaparece.   */
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-elements com PROGRAMADOR BR</h1>
+    Comandos que permitem modificar o estilo de apenas uma parte dos elementos. Ex.:
+    
+    <p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt corporis beatae doloribus vel. Laudantium non adipisci cum possimus, quia doloribus accusantium, libero quibusdam veniam doloremque soluta at explicabo error impedit.</p>
+
+    <p>Abaixo um exemplo de como redimensionar o tamanho de uma imagem para usá-la em uma lista, usando o pseudo-elemento <strong>::before</strong>.</p>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+</html>

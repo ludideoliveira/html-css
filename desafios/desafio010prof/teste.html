@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            /* width: 830px; 
+            se eu usar apenas o width, ele vai continuar quebrando caso fique em telas menores e com conteúdo estendido em telas grandes. as propriedades min-width e max-width são mais responsivas*/
+            min-width: 320px; 
+            max-width: 830px;
+            margin: auto;
+            /* dessa forma, o conteúdo irá se adaptar com o tamanho da tela. A imagem continua quebrando, podendo usar width=100% ou usar pictures e opções da imagem em outros tamanhos */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ab enim qui neque ipsam, consequuntur illum laborum sit perspiciatis quaerat alias minima! Recusandae obcaecati aut corrupti laboriosam soluta quidem vel! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, exercitationem. Accusamus perspiciatis nostrum autem suscipit recusandae amet quia odio dolorum, veniam repellendus vitae omnis hic tempore, in porro error voluptatum.</p>
+        <img src="imagens/irina-blok.jpg" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam ab enim qui neque ipsam, consequuntur illum laborum sit perspiciatis quaerat alias minima! Recusandae obcaecati aut corrupti laboriosam soluta quidem vel! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, exercitationem. Accusamus perspiciatis nostrum autem suscipit recusandae amet quia odio dolorum, veniam repellendus vitae omnis hic tempore, in porro error voluptatum.</p>
+        <!-- Usando o devtools é possível aumentar e diminuir a tela desse teste para saber o ponto máximo dela que não irá quebrar a imagem (criando barra lateral). Nesse caso foi 808px. Depois que foi add o padding no main, a largura ideal antes de quebrar é 830 -->
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML 5</title>
+
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 700px)" srcset="assets/foto-p.png" type="image/png">
+
+        <source media="(max-width: 1000px)" srcset="assets/foto-m.png" type="image/png">
+        
+        <img src="assets/foto-g.png" alt="imagem flexível">
+    </picture>
+      <!-- Essa tag parece uma imagem, existe até um img dentro, mas ela permite que você crie várias fontes -->
+    <!-- IMPORTANTE: preocupe-se sempre com o tamanho das imagens e do site, pois as rolagens, principalmente a lateral, incomodam o usuário, que terá que ficar movendo o mouse para ver o site todo. Provavelmente o usuário irá sair do site. É preciso facilitar ao máximo a experiência do usuário -->
+    <!-- BOUNCE RATE ou Taxa de Rejeição do Google: medida para dar valor ou desvalorizar um site. Sites com alto bounce rate é um site ruim para o Google, que irá parar de indicá-lo para outras pessoas. -->
+    <!-- Souce media por padrão pede a largura mínima, mas o professor alterou para a máxima -->
+
+    <h1>Reproduzindo áudios</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML</p>
+    <!-- <audio src="midia/sailing-telecasted.mp3" controls autoplay></audio> 
+    FORMA MAIS SIMPLES DE ADICIONAR AUDIO -->
+
+    <audio preload="metadata" controls loop>
+        <source src="midia/sailing-telecasted.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/sailing-telecasted.wav" type="audio/wav">
+        <source src="midia/sailing-telecasted.ogg" type="audio/ogg">
+    </audio>
+    <p>Caso o seu navegador não consiga reproduzir os áudio, <a href="midia/sailing-telecasted.mp3">clique aqui para baixar o arquivo MP3.</a></p>
+    <!-- Forma mais completa para adicionar áudio -->
+   
+  
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

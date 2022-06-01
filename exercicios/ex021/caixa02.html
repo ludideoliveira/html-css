@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(119, 0, 0, 0.308);
+            margin: 0;
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 0px 15px;
+            /* 1 valor para todos os cantos, 2 valores (superior esquerda e inferior direita iguais; inferior esquerda e superior direita iguais) ou 4 valores diversos (sentido horário) */
+            box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.37);
+        }
+        header > h1{
+            text-align: center;
+        }
+        nav{
+            background-color: gray;
+            padding: 3px;
+            text-align: center;
+            box-shadow: 2px 4px 4px 0px rgba(46, 46, 46, 0.842);
+        }
+        nav > a{ 
+            /* significa que todo link dentro do nav terá essas configs */
+            /* esse sinal > significa que o a é filho do nav */
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 50px;
+            /* margin right para que entre os links tenha um espaço */
+        }
+        nav > a:hover{
+            /* significa que quando os links, dentro da nav, forem cobertos pelo cursor */
+            text-decoration: underline;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px 15px 25px 35px;
+        }
+        footer{
+            background-color: rgba(34, 1, 1, 0.452);
+            text-align: center;
+            padding: 3px;
+            /* se eu inserir apenas esse padding no footer, ele ficará muito grande, mesmo que seja apenas 1px, isso porque o programa está considerando também os 16px de margin do p. Para resolver isso eu preciso zerar a margin desse parágrafo e aplicar o padding no footer */
+            margin: 0;
+            /* esse margin 0 é para o footer ficar colado nas laterias, mas para que isso aconteça, é necessário incluir essa mesma config no body, poir ele por padrão já possui uma quantidade de margin. */
+        }
+        footer > p{
+            margin: 0;
+            /* para retirar a margin do parágrafo e o padding ficar melhor */
+        }
+        article > aside{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exemplo de site com grouping tags</h1>
+        <nav>
+            <a href="#">Sobre nós</a>
+            <a href="#">Produtos</a>
+            <a href="#">Clientes</a>
+            <a href="#">Portfólio</a>
+            <a href="#">Contatos</a> 
+        </nav>
+    </header>
+
+    <main>
+        <section id="assuntos"> </section>
+        <section id="noticias">
+            <article>
+                <h1>Um título para o article. Dentro do main. </h1>
+                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere nam expedita mollitia quas excepturi ratione. Cumque repellat natus debitis soluta. Ipsa, dicta dignissimos? Deserunt corporis exercitationem officia tempore adipisci ipsum. (Um parágrafo como conteúdo do article.)</p>
+                <aside>
+                    <p>Artigo escrito por Ludi Oliveira (aside)</p>
+                </aside>
+            </article>
+            <article>
+                <section>É possível ter section dentro de article e vice e versa. Atualmente não existe uma regra sobre quais tags podem ir dentro de outras. </section>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvida por Ludi Oliveira</p>
+    </footer>
+</body>
+</html>

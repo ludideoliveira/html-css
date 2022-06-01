@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando listas</title>
+    <style>
+        li{
+            list-style: none;
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        li:nth-of-type(3n -2){
+            background-color: gold;
+        }
+        /* esse 3n -2 ele seleciona de 3 em 3, a partir do primeiro número. se tivesse apenas o 3n, ele iria iniciar no 3 */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+        <li>Item 11</li>
+        <li>Item 12</li>
+        <li>Item 13</li>
+        <li>Item 14</li>
+        <li>Item 15</li>
+    </ul>
+</body>
+</html>
