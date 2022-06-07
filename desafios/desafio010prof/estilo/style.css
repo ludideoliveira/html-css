@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Android';
-    src: url(./fontes/idroid.otf) format('opentype');
+    src: url(../fontes/idroid.otf) format('opentype');
 }
 
 /* É a raiz do doc. O que for incluído aqui será aplicado para todo o projeto. Os nomes das variáres, que sempre iniciam com --, é escolha sua.  */
